@@ -24,12 +24,13 @@
                     </tr>
                 </thead>
                 <tbody>
+                    @foreach($categories as $category)
                     <tr>
-                        <td class="align-middle">1</td>
-                        <td class="align-middle">Water</td>
+                        <td class="align-middle">{{$category->id}}</td>
+                        <td class="align-middle">{{$category->name}}</td>
                         <td>
                             <img width="40px"
-                                 src="https://cdn.pixabay.com/photo/2021/10/11/23/49/app-6702045_1280.png" alt="Water" >
+                                 src="{{$category->img}}" alt="Water" >
                         </td>
                         <td class="align-middle">
                             <a href="#" class="btn btn-outline-primary btn-sm">
@@ -42,24 +43,7 @@
                             </a>
                         </td>
                     </tr>
-                    <tr>
-                        <td class="align-middle">2</td>
-                        <td class="align-middle">Food</td>
-                        <td>
-                            <img width="40px"
-                                 src="https://cdn.pixabay.com/photo/2021/10/11/23/49/app-6702045_1280.png" alt="Water" >
-                        </td>
-                        <td class="align-middle">
-                            <a href="#" class="btn btn-outline-primary btn-sm">
-                                <i class="bi bi-pencil-square"></i>
-                                Edit
-                            </a>
-                            <a href="#" class="btn btn-outline-danger btn-sm">
-                                <i class="bi bi-trash3"></i>
-                                Delete
-                            </a>
-                        </td>
-                    </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>

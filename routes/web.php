@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,9 +18,12 @@ Route::get('/', function () {
     return view('home.home');
 });
 
-Route::get('/category', function (){
-    return view('category.category-list');
-});
+//Route::get('/category', function (){
+//    return view('category.category-list');
+//});
+
+Route::get('/category', [CategoryController::class,'list'])->name('category');
+
 
 Route::get('/category/create', function (){
     return view('category.category-add');
