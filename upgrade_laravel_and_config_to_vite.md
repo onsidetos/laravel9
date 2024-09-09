@@ -163,10 +163,15 @@ VITE_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"
 - Update Blade File to Load Assets via Vite
 ```
 <head>
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+   @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 ```
 - Run Vite
 ```
 npm run build
+```
+### Step 11
+- Run Project
+```
+php artisan serve
 ```
