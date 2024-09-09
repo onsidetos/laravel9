@@ -98,11 +98,7 @@ npm install bootstrap
 npm install
 ```
 ### Step 7 
-- Create vite.config.js
-```
-touch vite.config.js
-```
-- And following content below
+- Create vite.config.js and following content below
 ```
 import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
